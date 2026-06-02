@@ -1,0 +1,5 @@
+{
+  "rate_limit_per_minute": 5,
+  "cache_ttl_seconds": 60,
+  "server_instances": 1
+}
