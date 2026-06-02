@@ -1,6 +1,11 @@
-# LogIntelligence: AI-Powered Telemetry SDK & SRE Dashboard
+# LogIntelligence – AI‑Powered Telemetry SDK & SRE Dashboard
 
-**LogIntelligence** is a production-grade, resume-ready log aggregation and diagnostic intelligence platform. It consists of a high-performance **TypeScript telemetry SDK**, a **resilient Express & MongoDB backend**, and a **minimalist dark-mode React dashboard** featuring automated anomaly detection and root-cause fixes powered by Google's **Gemini API**.
+**LogIntelligence** is a production‑grade, resume‑ready platform for collecting, enriching, and diagnosing application logs. It includes:
+
+- A **TypeScript telemetry SDK** with memory‑efficient batching, exponential backoff retries, and graceful shutdown handling.
+- An **Express & MongoDB backend** that validates client API keys by hashing them with **SHA‑256** and storing only the hashes. Incoming logs are parsed and **segregated** by service, severity, and a regex‑based **signature classification** (`DB_ERROR`, `AUTH_FAIL`, `TIMEOUT`).
+- A **sliding‑window anomaly detector** that monitors error‑rate spikes over the last 5 minutes and instantly creates anomaly records. Fatal logs trigger immediate alerts.
+- Integration with **Google Gemini** (fallback to rule‑based suggestions) to generate root‑cause explanations and ready‑to‑apply code‑diff fixes, displayed in a dark‑mode React dashboard with real‑time log streams and an AI Diagnostic Drawer.
 
 ---
 
